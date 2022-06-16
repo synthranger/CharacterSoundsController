@@ -8,7 +8,7 @@ A module for quick and easy character sounds including:
 
 ---
 ## Demo
-![video](https://github.com/Synthranger/CharacterSoundsController/assets/VideoDemo.mp4) 
+https://user-images.githubusercontent.com/86300361/174029384-8e1302e8-0684-4e83-b47d-748725cd3c1a.mp4
 
 ---
 ## Setting up
