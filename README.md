@@ -7,6 +7,10 @@ A module for quick and easy character sounds including:
 [Roblox Model](https://www.roblox.com/library/9925561505/CharacterSoundsController)
 
 ---
+## Demo
+![video](https://github.com/Synthranger/CharacterSoundsController/assets/VideoDemo.mp4) 
+
+---
 ## Setting up
 Put the CharacterSoundsController anywhere the client can access it.
 Preferrably somewhere in ReplicatedStorage.
