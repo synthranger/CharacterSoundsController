@@ -22,12 +22,10 @@ require(game.ReplicatedStorage.CharacterSoundsController):Commence(true)
 ## Documentation
 ### Functions <br>
 #### CharacterSoundsController:Commence
-Starts the Controller. Set the first argument to true for auto player character wrapping.
+Starts the controller. Set the first argument to true if you want the controller to wrap all the players' characters by itself.
 ```lua
 function CharacterSoundsController:Commence(autoWrapPlayers: boolean): CharacterSoundsController
 ```
-
-<br>
 
 #### CharacterSoundsController:WrapCharacter
 Wraps a character and gives it character sounds.
@@ -44,8 +42,6 @@ Now let's rename it into Sprint. Note that we will be using this SoundGroup in a
 ![image](assets/SprintFolderCreated.PNG) <br>
 Now you can freely put sounds and [stacked sounds](https://github.com/Synthranger/CharacterSoundsController#making-stacked-sounds) inside the individual folders of this SoundGroup.
 
-<br>
-
 ### Making stacked sounds
 Just add a folder inside the material folder that you want stacked sounds to be. <br>
 
@@ -55,8 +51,6 @@ Possible use cases are:
 
 It should look like this: <br>
 ![image](assets/StackedSounds.PNG)
-
-<br>
 
 ### Using hooks
 In this section of Tutorials we will finally use the Sprint SoundGroup we did back [here](https://github.com/Synthranger/CharacterSoundsController#making-a-new-sound-group). <br>
@@ -72,15 +66,13 @@ As you can see with the example below, it is a hook that changes the SoundGroup 
 ```lua
 return function(character: Model, humanoid: Humanoid)
 	local rootPart: Part = character:WaitForChild("HumanoidRootPart")
-	local verticalVelocity = rootPart.AssemblyLinearVelocity * Vector3.new(1, 0, 1)
-	if verticalVelocity.Magnitude > 16 then
-		return "Sprint"
+	local horizontalVelocity = rootPart.AssemblyLinearVelocity * Vector3.new(1, 0, 1)
+	if horizontalVelocity.Magnitude > 16 then
+		return "Sprint" -- If the horizontal speed of the rootPart is greater than 16 Studs per second it will return Sprint
 	end
 	return "Default"
 end
 ```
-
-<br>
 
 ### Using the Landing hook 
 The landing hook has more arguments than the other categories so I made a separate section for it here. <br>
@@ -100,3 +92,5 @@ return function(character: Model, humanoid: Humanoid, fallPosition: Vector3, lan
 end
 ```
 (You need to make a BoneCrunch SoundGroup for this to work)
+
+If any issues arise or you have any questions you can open an issue in the [issue tracker](https://github.com/Synthranger/CharacterSoundsController/issues) or you can contact me via Discord at Synthranger_#1764
