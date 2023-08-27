@@ -1,0 +1,2 @@
+local CharacterSoundsController = require(game.ReplicatedStorage.CharacterSoundsController)
+CharacterSoundsController:Commence()
